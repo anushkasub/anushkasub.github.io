@@ -1,0 +1,8 @@
+- title: "GEMM the New Gem: The Inevitable Kernel & its Sensitivity to Compiler Optimizations & Libraries"
+  authors: "Siyuan Ma, Bagus Hanindhito, Anushka Subramanian, Lizy K. John"
+  venue: "IEEE Computer Architecture Letters"
+  venue_short: "CAL"
+  type: journal
+  year: 2026
+  links:
+    pdf: "https://utw10244.utweb.utexas.edu/pubs/ma_cal26.pdf"

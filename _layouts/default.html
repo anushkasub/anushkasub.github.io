@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="{{ site.author.avatar | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  {% include masthead.html %}
+  <div class="page{% if page.no_sidebar %} page-wide{% endif %}">
+    {% unless page.no_sidebar %}{% include sidebar.html %}{% endunless %}
+    <main class="content" id="content">
+      {% if page.title and page.hide_title != true %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+      {{ content }}
+    </main>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

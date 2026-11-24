@@ -1,0 +1,17 @@
+{% assign items = site.data.news | sort: "date" | reverse %}
+{% assign limit = site.news_limit | default: 6 %}
+<ul class="news">
+  {% for item in items limit: limit %}
+  <li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.label %}{{ item.label }}{% else %}{{ item.date | date: "%b %Y" }}{% endif %}</time><span>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+  {% endfor %}
+</ul>
+{% if items.size > limit %}
+<details class="older-news">
+  <summary>Older news</summary>
+  <ul class="news">
+    {% for item in items offset: limit %}
+    <li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.label %}{{ item.label }}{% else %}{{ item.date | date: "%b %Y" }}{% endif %}</time><span>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}

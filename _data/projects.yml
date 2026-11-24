@@ -1,0 +1,24 @@
+- title: "Freshness at Scale: Hardening CXL Memory against Replay Attacks"
+  year: 2026
+  context: "Course project, Security at the Hardware-Software Interface (Prof. Neil Zhao)"
+  summary: "A replay-attack protection scheme for CXL-attached memory in confidential computing. Modeled MAC-based freshness mechanisms in gem5, analyzed their security guarantees, and compared performance against Merkle-tree and other integrity baselines."
+
+- title: "PageWise: Efficient Profile-Guided Memory Management for Unified Virtual Memory"
+  year: 2026
+  context: "Course project, Computer Architecture: User-System Interplay, UT Austin (Prof. Mattan Erez)"
+  summary: "A profile-guided scheme for UVM that extends spatial-locality-centric tree-based prefetching with utility-aware page placement, enabled by access-aware eviction. Implemented in GPGPU-Sim/UVMSmart, it reduces PCIe traffic by up to 95% and achieves up to 5× speedup on sparse graph traversal."
+
+- title: "Performance Implications of Unified Virtual Memory for LLM Inference Serving"
+  year: 2026
+  context: "Course project, Computer Performance Evaluation and Benchmarking, UT Austin (Prof. Lizy John)"
+  summary: "Characterized driver-based memory management with UVM for LLM inference serving against the framework-level policies used by vLLM. Measured managed-memory overheads on an A100 by patching PyTorch, analyzing throughput and latency metrics (TTFT, TPOT, ITL)."
+
+- title: "CNN Accelerator Design and Deployment"
+  year: 2025
+  context: "ML Hardware-Algorithm Co-design, UT Austin (Prof. Mattan Erez, Prof. Michael Orshansky)"
+  summary: "Designed and deployed a quantized CNN accelerator end-to-end on AWS F1 FPGAs with Xilinx Vitis HLS: blocked matrix multiplication with int8 uniform asymmetric quantization, im2col, ReLU and MaxPool."
+
+- title: "FPGA Datapath Design for Narrowband Software-Defined Radio"
+  year: 2022
+  context: "Undergraduate capstone, RVCE and Lekha Wireless R&D"
+  summary: "Designed and synthesized the FPGA datapath for a Government of India-sponsored defence communication system on a Zynq-7000 SoC: signal processing blocks (decimation filter, randomizer, modulation), a ping-pong buffer, DMA controller and AXI interconnect integration. Implemented a novel Galois-based LFSR with high throughput gains."

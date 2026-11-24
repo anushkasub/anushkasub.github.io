@@ -1,0 +1,48 @@
+title: "Anushka Subramanian"
+url: "https://anushkasub.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: "Anushka Subramanian"
+  avatar: "/images/anushka-lph.jpg"
+  bio: "Graduate student, UT Austin ECE"
+  employer: ""
+  location: "Austin, TX"
+  email: "anushka.subramanian@utexas.edu"
+  github: "anushkasub"
+  linkedin: "anushka-sub"
+
+cv_pdf: "/files/Anushka_Subramanian_CV.pdf"
+
+navigation:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: Blog
+    url: /blog/
+
+news_limit: 6
+
+permalink: /blog/:year/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      no_sidebar: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,15 @@
+{% assign pub = include.pub %}
+{% capture me %}<strong>{{ site.author.name }}</strong>{% endcapture %}
+<article class="pub">
+  <span class="venue-badge venue-{{ pub.type | default: 'conference' }}">{{ pub.venue_short | default: pub.type }}</span>
+  <div class="pub-body">
+    <h3 class="pub-title">{% if pub.links.pdf %}<a href="{{ pub.links.pdf | relative_url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+    <p class="pub-authors">{{ pub.authors | replace: site.author.name, me }}</p>
+    <p class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.year }}{% if pub.award %} <span class="award"><i class="fa-solid fa-award" aria-hidden="true"></i> {{ pub.award }}</span>{% endif %}</p>
+    {% if pub.links %}
+    <p class="pub-links">
+      {% for l in pub.links %}<a class="btn" href="{{ l[1] | relative_url }}">{{ l[0] | upcase }}</a>{% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</article>

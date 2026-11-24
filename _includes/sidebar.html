@@ -1,0 +1,15 @@
+{% assign a = site.author %}
+<aside class="sidebar" aria-label="About the author">
+  <img class="avatar" src="{{ a.avatar | relative_url }}" alt="Photo of {{ a.name }}" width="1000" height="750">
+  <div class="who">
+    <h2 class="author-name">{{ a.name }}</h2>
+    {% if a.bio != "" %}<p class="author-bio">{{ a.bio }}</p>{% endif %}
+  </div>
+  <ul class="author-links">
+    {% if a.employer != "" %}<li><i class="fa-solid fa-fw fa-building-columns" aria-hidden="true"></i><span>{{ a.employer }}</span></li>{% endif %}
+    {% if a.location != "" %}<li><i class="fa-solid fa-fw fa-location-dot" aria-hidden="true"></i><span>{{ a.location }}</span></li>{% endif %}
+    {% if a.email != "" %}<li><a href="mailto:{{ a.email }}"><i class="fa-solid fa-fw fa-envelope" aria-hidden="true"></i><span>Email</span></a></li>{% endif %}
+    {% if a.github != "" %}<li><a href="https://github.com/{{ a.github }}"><i class="fa-brands fa-fw fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>{% endif %}
+    {% if a.linkedin != "" %}<li><a href="https://www.linkedin.com/in/{{ a.linkedin }}"><i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>{% endif %}
+  </ul>
+</aside>
