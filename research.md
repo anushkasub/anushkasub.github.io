@@ -17,15 +17,3 @@ My research interests lie at the intersection of computer architecture and syste
 <h3 class="pub-year">{{ group.name }}</h3>
 {% for pub in group.items %}{% include publication.html pub=pub %}{% endfor %}
 {% endfor %}
-
-## Selected Projects
-
-<div class="projects">
-{% for p in site.data.projects %}
-<article class="project">
-  <h3 class="project-title">{{ p.title }} <span class="project-year">{{ p.year }}</span></h3>
-  <p class="project-context">{{ p.context }}</p>
-  {{ p.summary | markdownify }}
-</article>
-{% endfor %}
-</div>
